@@ -1,0 +1,23 @@
+{
+  "name": "templating",
+  "version": "1.0.0",
+  "description": "templating",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-002-fall-2015/examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-002-fall-2015/examples/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-002-fall-2015/examples#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1"
+  }
+}
