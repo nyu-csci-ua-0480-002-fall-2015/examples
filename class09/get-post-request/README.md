@@ -2,10 +2,10 @@ Examples of GET and POST requests
 -----
 To run the sample code... in this directory, run:
 
-<code>
+<code><pre>
 npm install .
 node app.js
-</code>
+</pre></code>
 
 Open up http://localhost:3000 to see examples of get and post requests.
 
