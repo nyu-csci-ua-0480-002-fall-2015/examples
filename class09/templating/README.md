@@ -1,6 +1,6 @@
 Templating Examples
 -----
-To run the example code... in this directory, run:
+To run the example code, use the following commands in this directory:
 
 <code><pre>
 npm install .

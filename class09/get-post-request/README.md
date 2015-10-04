@@ -1,6 +1,6 @@
 Examples of GET and POST requests
 -----
-To run the sample code... in this directory, run:
+To run the example code, use the following commands in this directory:
 
 <code><pre>
 npm install .
