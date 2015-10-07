@@ -1,0 +1,25 @@
+{{greeting}}
+
+{{ #if flag}}
+this is soooo true!
+{{else}}
+in the else branch
+{{/if}}
+
+<ul>
+{{#each obj}}
+<li>{{@key}} - {{this}}</li>
+{{/each}}
+</ul>
+
+<ul>
+{{#each words}}
+	<li>{{this}}</li>
+{{/each}}
+</ul>
+
+<ul>
+{{#each words}}
+	<li>{{.}}</li>
+{{/each}}
+</ul>

@@ -1,0 +1,38 @@
+Iterate over array, using this.
+<ul>
+{{#each numbers}}
+<li>{{this}}</li>
+{{/each}}
+</ul>
+
+Iterate over array, using . (dot).
+<ul>
+{{#each numbers}}
+<li>{{.}}</li>
+{{/each}}
+</ul>
+
+Iterate over object.
+<ul>
+{{#each point}}
+<li><strong>{{@key}}</strong>{{this}}</li>
+{{/each}}
+</ul>
+
+Conditional (true).
+<p>
+{{#if flag}}
+in if branch
+{{else}}
+in else branch
+{{/if}}
+</p>
+
+Conditional (false).
+<p>
+{{#if otherFlag}}
+in if branch
+{{else}}
+in else branch
+{{/if}}
+</p>
