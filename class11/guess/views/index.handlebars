@@ -1,0 +1,10 @@
+<form method="POST" action="">
+	Guess the secret number: <input type=number name="guess">
+	<input type="submit">	
+</form>
+Your guesses so far:
+<ul>
+	{{#each guesses}}
+	<li>{{this}}</li>
+	{{/each}}
+</ul>
