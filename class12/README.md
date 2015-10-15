@@ -1,5 +1,6 @@
+This app will display a list of cat names stored in mongodb. To get everything set up, you have to create a database and collection called catdb and cats respectively...
+
 * start mongod db
-* create a database and collection called catdb and cats respectively...
 * simply start mongodb (if it isn't already started) to get your database server running
 	* mongod
 	* (you may have to create /data/db with sudo)
@@ -9,4 +10,9 @@
 	* db.cats.insert({name:'paw newman'})
 	* db.cats.insert({name:'katy purry'})
 	* db.cats.insert({name:'chairman meow'})
+
+Once you have your database running, you can run the web app (which used express generator to bootstrap the project layout):
+
+* in this directory (class12/catnames)... npm install . (to get all dependencies, like express, body-parser, etc.)
 * use bin/www (when you're in the class12/catnames directory) to run (we used express generator to start this)
+* point your browser to localhost:3000
