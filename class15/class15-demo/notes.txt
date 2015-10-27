@@ -1,0 +1,20 @@
+regular expressions
+simple characters
+abc .. matches exactly abc
+
+
+special characters
+.  ... any character (once)
+\w ... word character (alphanumeric, no spaces, probably hyphens)
+\d ... a single digit
+[xyz] ... match any one inside the brackets
+[^xyz] ... match none of the characters inside brackets
+
+* ... ???? preceding matched 0 or more times
++ ... 1 or more
+? ... 0 or 1
+{n} ... n many characters preceding (in curly braces)
+{n, m} ... minimally n, max m...
+
+() ... to group matches... so that you can remember later...
+| ... or
