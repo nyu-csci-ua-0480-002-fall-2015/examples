@@ -12,4 +12,14 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/schrodingerscat', function(req, res) {
+  var context = {}
+  Cat.find(function(err, cats, count) {
+    context.cats = cats;
+  });
+  console.log(context);
+  res.render( 'index', context);
+});
+
+
 module.exports = router;
