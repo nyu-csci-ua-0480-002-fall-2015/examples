@@ -1,0 +1,5 @@
+1. .... create the request object
+2. ... configure (that is, specify the req method, url, whether or not it's async)
+3. ... set event listeners ... for when the data loads, when there's an error
+4. ... actually send the request
+

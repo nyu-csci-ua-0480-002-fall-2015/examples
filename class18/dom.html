@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+		<!-- this is a comment -->
+	<h2>Metatsyntactic Variable Names</h2>
+	<div class="content">
+		<p>Foo</p>
+		<p>Bar</p>
+		<p>Baz</p>
+		<p>Qux</p>
+	</div>
+	<div class="fine-print">
+		(In other languages, these names are different!)
+	</div>
+	<script>
+function talksAbout(node, search) {
+	if(node.nodeType === document.TEXT_NODE) {
+		return node.nodeValue.indexOf(search) > -1; 
+	} else if (node.nodeType === document.ELEMENT_NODE) {
+		for(var i = 0; i < node.childNodes.length; i++) {
+			if(talksAbout(node.childNodes[i], search)) {
+				return true;
+			}	
+		}
+		return false;
+	}
+}
+console.log(talksAbout(document.body, 'Baz'));
+console.log(talksAbout(document.body, 'I do not exist'));
+	</script>
+</body>
+</html>

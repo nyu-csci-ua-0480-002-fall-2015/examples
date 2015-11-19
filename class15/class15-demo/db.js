@@ -24,6 +24,7 @@ var Pizza = new mongoose.Schema({
 // schema goes here
 
 // configure url slugs plugin
+Pizza.plugin(URLSlugs('size crust'));
 mongoose.model('Pizza', Pizza);
 mongoose.model('Topping', Topping);
 mongoose.connect('mongodb://localhost/pizzadb');

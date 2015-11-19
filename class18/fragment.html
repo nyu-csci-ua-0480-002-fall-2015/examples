@@ -1,0 +1,13 @@
+<div id="content">
+	<p>One</p>
+		<p class="cta">Two</p>
+			<p class="cta">Three</p>
+</div>
+<script>
+var div = document.getElementById('content');
+var p = div.getElementsByTagName('p');
+
+for(var i = 0; i < p.length; i++) {
+	div.removeChild(p[i]);
+}
+</script>

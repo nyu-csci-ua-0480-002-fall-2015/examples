@@ -10,4 +10,14 @@ UserSchema.plugin(passportLocalMongoose);
 
 mongoose.model('User', UserSchema);
 mongoose.connect('mongodb://localhost/class16db');
+// User.register (creating a new user)
+// User.authenticate (strategy)
+
+
+
+
+
+
+
+
 
