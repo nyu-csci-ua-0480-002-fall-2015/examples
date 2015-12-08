@@ -1,0 +1,20 @@
+* project deadline on Thursday, with 24 hour grace period (if it's late, 5 points off)
+* ajax requirement 
+
+	* get or a post
+	* you can use a framework (jquery, whatever)
+	* if you can, try to incorporate it within the flow of your project
+* sass or less
+	* make sure that it's in your repository
+	* you could put compiled version in your repository
+* jshint
+	* i'll run jshint... deductions for errors
+	* unless errors are due to library
+* concatentation
+
+todo:
+
+
+* update your research topics, along with their point values
+
+

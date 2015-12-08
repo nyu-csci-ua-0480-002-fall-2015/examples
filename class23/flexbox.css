@@ -1,8 +1,18 @@
+button {
+	width: 3em;
+	height: 3em;
+	background-color: #aaa;
+	border: 0;
+	margin: 5px;
+}
+body {
+	font-family: sans-serif;
+	font-size: 2em;
+}
+
 #container {
-	border: 2px solid #555;
 	padding: 10px;
 	display: flex; 	
-	height: 100%; 
 
 	/* 
 	flex-direction: row-reverse; 
@@ -10,21 +20,22 @@
 	flex-wrap: wrap;
 
 	justify-content: flex-end;
+	justify-content: space-around;
 
 	align-items: center;
-	height: 700px;
+	flex-direction: column; 
+	flex-wrap: wrap;
 	*/
-	justify-content: space-around;
 
 
 }
 
 .item {
 	display: flex;
-	background-color: #aaa;
-	border: 2px solid #555;
+	background-color: #599;
 	margin: 10px;
-	padding: 10px;
+	padding: 1em;
+	overflow: hidden;
 }
 
 /*

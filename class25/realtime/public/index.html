@@ -1,0 +1,51 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var socket = io();
+/*
+document.addEventListener('mousemove', function(evt) {
+	console.log(evt.x, evt.y);
+	socket.emit('mouse moved', {x: evt.x, y: evt.y});
+});
+*/
+
+/*
+socket.on('mouse moved', function(msg){
+	console.log(msg);
+	var div = document.querySelector('#' + msg.id);
+	if(!div) {
+		div = document.createElement('div');
+		div.textContent = msg.id;
+		div.id = msg.id
+		div.style.position = 'fixed';
+		document.body.appendChild(div);
+	} else {
+		div.style.left = msg.x + 'px';	
+		div.style.top = msg.y + 'px';	
+	}
+});
+*/
+
+
+socket.on('connect', onConnect);
+function onConnect(s) {
+	socket.emit('my awesome event', 'a message');
+	socket.emit('join', 'roomie');
+}
+
+socket.on('boo', function(msg) {
+	console.log(msg);	
+	console.log(msg.stuff);
+});
+
+socket.on('chat', function(msg) {
+	document.querySelector('#chat').appendChild(document.createElement('div')).textContent = msg;
+});
+document.addEventListener('click', handleClick);
+function handleClick() {
+	socket.emit('chat', document.querySelector('#msg').value);
+}
+</script>
+<input id="msg" type="text">
+<button id="sendBtn">Chat</button>
+<div id="chat">
+</div>
