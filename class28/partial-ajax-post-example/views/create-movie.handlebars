@@ -1,0 +1,47 @@
+<!--title:__________ [submit]-->
+<!-- sort of doesn't matter as long as prevent default -->
+<script>
+document.addEventListener('DOMContentLoaded', onLoad);
+function onLoad() {
+	console.log('load');
+	// watch out for button clicks
+	document.getElementById('btn').addEventListener('click', onClick);
+}
+
+function onClick(evt) {
+	console.log('click');
+	// create POST request
+	evt.preventDefault();
+	var req = new XMLHttpRequest();
+	req.open('POST', '/api/movie', true);
+
+
+	// set header
+	req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+	// retrieve input
+	var movieTitle = document.getElementById('movieTitle').value;
+
+	// because this is a POST, specify data in body
+	req.send('title=' + movieTitle);
+
+	// when request comes back / complets... do some stuff
+	// req.send finished
+	req.addEventListener('load', function() {
+		console.log(req, req.status, req.responseText);
+	});
+}
+</script>
+<form method="POST" action="">
+	Title: <input type="text" name="movieTitle" id="movieTitle" />
+	<input type="submit" name="btn" id="btn" />
+</form>
+
+
+
+
+
+
+
+
+

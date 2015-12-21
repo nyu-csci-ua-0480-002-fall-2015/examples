@@ -1,0 +1,114 @@
+
+<style>
+.highlight {
+	background-color:#ffff88;
+}
+
+body {
+	font-family: sans-serif;
+}
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+
+
+form { 
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+h2 {
+	margin: auto;
+}
+
+td, th {
+	border: 1px solid #555;
+	text-align: left;
+	padding: 5px;
+}
+
+tr:nth-child(2n) {
+	background-color: #eee;
+}
+
+#bd {
+	text-align: center;
+}
+
+th {
+	font-weight:bold;
+	background-color: #000;
+	color: #fff;
+}
+
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	var btn = document.getElementById('btn');
+	btn.addEventListener("click", function(evt){
+		evt.preventDefault();
+		var url = "http://localhost:3000/api/movies";
+		var director = document.getElementById('director').value;
+		url = url + "?director=" + director;
+		var req = new XMLHttpRequest();
+		req.open('GET', url, true);
+		console.log('clicked');
+		req.addEventListener("load", function() {
+			console.log(req.responseText);
+			var tbody = document.createElement('tbody');
+			tbody.id = "movie-list";
+			JSON.parse(req.responseText).forEach(function(movie) {
+				var tr = tbody.appendChild(document.createElement('tr'));
+				tr.appendChild(document.createElement('td')).textContent = movie.title;
+				tr.appendChild(document.createElement('td')).textContent = movie.director;
+				tr.appendChild(document.createElement('td')).textContent = movie.year;
+			});
+			var movieList = document.getElementById('movie-list');
+			movieList.parentNode.replaceChild(tbody, movieList);
+			console.log(tbody);
+		});
+		req.send();
+	})
+})
+</script>
+<div id="bd">
+<h2>Let's Watch Some Movies!</h2>
+<form action="" method="get">
+	Director: <input type="text" id="director" name="director" value="{{director}}">	
+	<input id="btn" type="submit" value="Filter">
+</form>
+
+<p>
+{{#if director}}
+Showing only movies directed by: <span class="highlight">{{director}}</span>
+{{/if}}
+</p>
+<table>
+	<thead>
+		<th>Title</th>
+		<th>Director</th>
+		<th>Year</th>
+	</thead>
+	<tbody id="movie-list">
+		{{#each movies}}
+		<tr>
+			<td>{{title}}</td> 
+			<td>{{director}}</td> 
+			<td>{{year}}</td> 
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
